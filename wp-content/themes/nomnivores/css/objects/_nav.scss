@@ -1,0 +1,85 @@
+/* ==========================================================================
+   Navigation
+   ========================================================================== */
+
+/*
+ * Horizontal Nav
+ */
+.nav{
+    list-style:none;
+    margin-left:0;
+    @extend .cf;
+
+    > li{
+
+        &,
+        > a{
+            display:inline-block;
+           *display:inline;
+            zoom:1;
+        }
+    }
+}
+
+
+/*
+ * Vertical Nav
+ */
+.nav--stacked{
+
+    > li{
+        display:list-item;
+
+        > a{
+            display:block;
+        }
+    }
+}
+
+
+/*
+ * Centered list
+ */
+.nav--banner{
+    text-align:center;
+}
+
+
+/*
+ * Give nav links a big, blocky hit area
+ */
+.nav--block{
+    line-height:1;
+    /**
+     * Remove whitespace caused by `inline-block`.
+     */
+    letter-spacing:-0.31em;
+    word-spacing:-0.43em;
+    white-space:nowrap;
+
+    > li{
+        letter-spacing:normal;
+        word-spacing:normal;
+
+        > a{
+            padding:$half-spacing-unit;
+        }
+    }
+}
+
+
+/**
+ * Force a nav to occupy 100% of the available width of its parent
+ */
+.nav--fit{
+    display:table;
+    width:100%;
+
+    > li{
+        display:table-cell;
+
+        > a{
+            display:block;
+        }
+    }
+}

@@ -1,0 +1,33 @@
+
+/* ==========================================================================
+   Base styles
+   ========================================================================== */
+
+html {
+    font: #{($base-font-size/16px)*1em}/#{$line-height-ratio} $base-font-family;
+    overflow-y: scroll;
+    min-height: 100%;
+}
+html,
+button,
+input,
+select,
+textarea {
+    color: #222;
+}
+
+/*
+ * Selection styling
+ */
+::-moz-selection {
+    background: #328efe;
+    text-shadow: none;
+}
+::selection {
+    background: #328efe;
+    text-shadow: none;
+}
+
+hr{
+    margin-bottom: $base-spacing-unit - 2px;
+}

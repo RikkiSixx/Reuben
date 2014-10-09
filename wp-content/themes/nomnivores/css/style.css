@@ -1,0 +1,897 @@
+@charset "UTF-8";
+/* 
+
+Nomnivores
+
+Author: Rik Kendell - @Rikki_Sixx
+Version: 1.0;
+URL: http://www.nomnivores.co.uk/
+
+CONTENTS - STYLE.CSS
+-----------------------------------------
+1. SETUP
+2. CUSTOM
+
+*/
+/* ==========================================================================
+   1. Setup
+   ========================================================================== */
+/* ==========================================================================
+   1. Variables
+   ========================================================================== */
+/*
+ * Fonts 
+ */
+/*
+ * Brand Styling
+ */
+/*
+ * Framework Bits
+ */
+/* ==========================================================================
+   3. Utilities
+   ========================================================================== */
+h1, h2, h3, h4, h5, h6,
+p, blockquote, pre,
+dl, dd, ol, ul,
+form, fieldset, legend,
+table, th, td, caption,
+hr {
+  margin: 0;
+  padding: 0;
+}
+
+abbr[title], dfn[title] {
+  cursor: help;
+}
+
+u, ins {
+  text-decoration: none;
+}
+
+ins {
+  border-bottom: 1px solid;
+}
+
+img {
+  font-style: italic;
+}
+
+label,
+input,
+textarea,
+button,
+select,
+option {
+  cursor: pointer;
+}
+
+.text-input:active,
+.text-input:focus,
+textarea:active,
+textarea:focus {
+  cursor: text;
+  outline: none;
+}
+
+/* normalize.css v2.1.0 | MIT License | git.io/normalize */
+/* ==========================================================================
+   HTML5 display definitions
+   ========================================================================== */
+/*
+ * Correct `block` display not defined in IE 8/9.
+ */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+  display: block;
+}
+
+/*
+ * Correct `inline-block` display not defined in IE 8/9.
+ */
+audio,
+canvas,
+video {
+  display: inline-block;
+}
+
+/*
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/*
+ * Address styling not present in IE 8/9.
+ */
+[hidden] {
+  display: none;
+}
+
+/* ==========================================================================
+   Base
+   ========================================================================== */
+/*
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+html {
+  font-family: sans-serif;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+}
+
+/*
+ * Remove default margin.
+ */
+body {
+  margin: 0;
+}
+
+/* ==========================================================================
+   Links
+   ========================================================================== */
+/*
+ * Address `outline` inconsistency between Chrome and other browsers.
+ */
+a:focus {
+  outline: thin dotted;
+}
+
+/*
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+a:active,
+a:hover {
+  outline: 0;
+}
+
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+/*
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari 5, and Chrome.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/*
+ * Address styling not present in IE 8/9, Safari 5, and Chrome.
+ */
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+/*
+ * Address style set to `bolder` in Firefox 4+, Safari 5, and Chrome.
+ */
+b,
+strong {
+  font-weight: bold;
+}
+
+/*
+ * Address styling not present in Safari 5 and Chrome.
+ */
+dfn {
+  font-style: italic;
+}
+
+/*
+ * Address differences between Firefox and other browsers.
+ */
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+/*
+ * Address styling not present in IE 8/9.
+ */
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+/*
+ * Correct font family set oddly in Safari 5 and Chrome.
+ */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, serif;
+  font-size: 1em;
+}
+
+/*
+ * Improve readability of pre-formatted text in all browsers.
+ */
+pre {
+  white-space: pre-wrap;
+}
+
+/*
+ * Set consistent quote types.
+ */
+q {
+  quotes: "\201C" "\201D" "\2018" "\2019";
+}
+
+/*
+ * Address inconsistent and variable font size in all browsers.
+ */
+small {
+  font-size: 80%;
+}
+
+/*
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+/* ==========================================================================
+   Embedded content
+   ========================================================================== */
+/*
+ * Remove border when inside `a` element in IE 8/9.
+ */
+img {
+  border: 0;
+}
+
+/*
+ * Correct overflow displayed oddly in IE 9.
+ */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* ==========================================================================
+   Figures
+   ========================================================================== */
+/*
+ * Address margin not present in IE 8/9 and Safari 5.
+ */
+figure {
+  margin: 0;
+}
+
+/* ==========================================================================
+   Forms
+   ========================================================================== */
+/*
+ * Define consistent border, margin, and padding.
+ */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+/*
+ * 1. Correct `color` not being inherited in IE 8/9.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/*
+ * 1. Correct font family not being inherited in all browsers.
+ * 2. Correct font size not being inherited in all browsers.
+ * 3. Address margins set differently in Firefox 4+, Safari 5, and Chrome.
+ */
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 2 */
+  margin: 0;
+  /* 3 */
+}
+
+/*
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+button,
+input {
+  line-height: normal;
+}
+
+/*
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Chrome, Safari 5+, and IE 8+.
+ * Correct `select` style inheritance in Firefox 4+ and Opera.
+ */
+button,
+select {
+  text-transform: none;
+}
+
+/*
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */
+}
+
+/*
+ * Re-set default cursor for disabled elements.
+ */
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+/*
+ * 1. Address box sizing set to `content-box` in IE 8/9.
+ * 2. Remove excess padding in IE 8/9.
+ */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/*
+ * 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
+ *    (include `-moz` to future-proof).
+ */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  /* 2 */
+  box-sizing: content-box;
+}
+
+/*
+ * Remove inner padding and search cancel button in Safari 5 and Chrome
+ * on OS X.
+ */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/*
+ * Remove inner padding and border in Firefox 4+.
+ */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/*
+ * 1. Remove default vertical scrollbar in IE 8/9.
+ * 2. Improve readability and alignment in all browsers.
+ */
+textarea {
+  overflow: auto;
+  /* 1 */
+  vertical-align: top;
+  /* 2 */
+}
+
+/* ==========================================================================
+   Tables
+   ========================================================================== */
+/*
+ * Remove most spacing between table cells.
+ */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* ==========================================================================
+   Mixins
+   ========================================================================== */
+/* ==========================================================================
+   HELPER CLASSES
+   ========================================================================== */
+/*
+ * Container
+ */
+.container {
+  padding: 24px;
+}
+
+.container > :last-child {
+  margin-bottom: 0;
+}
+
+/*
+ * Clearfix
+ */
+.cf:after, .nav:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/*
+ * Hide content without 'display: none'
+ */
+.accessibility,
+.visuallyhidden {
+  border: 0!important;
+  clip: rect(0 0 0 0) !important;
+  height: 1px!important;
+  margin: -1px !important;
+  overflow: hidden!important;
+  padding: 0!important;
+  position: absolute!important;
+  width: 1px!important;
+}
+
+/* ==========================================================================
+   Base styles
+   ========================================================================== */
+html {
+  font: 1em/1.5 sans-serif;
+  overflow-y: scroll;
+  min-height: 100%;
+}
+
+html,
+button,
+input,
+select,
+textarea {
+  color: #222;
+}
+
+/*
+ * Selection styling
+ */
+::-moz-selection {
+  background: #328efe;
+  text-shadow: none;
+}
+
+::selection {
+  background: #328efe;
+  text-shadow: none;
+}
+
+hr {
+  margin-bottom: 22px;
+}
+
+/* ==========================================================================
+   Font Styles
+   ========================================================================== */
+/*
+ * Headings
+ */
+h1, .alpha {
+  font-size: 36px;
+  font-size: 2.25rem;
+  line-height: 1.33333;
+}
+
+h2, .beta {
+  font-size: 30px;
+  font-size: 1.875rem;
+  line-height: 1.6;
+}
+
+h3, .gamma {
+  font-size: 24px;
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+h4, .delta {
+  font-size: 20px;
+  font-size: 1.25rem;
+  line-height: 1.2;
+}
+
+h5, .epsilon {
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+h6, .zeta {
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 1.71429;
+}
+
+.giga {
+  font-size: 96px;
+  font-size: 6rem;
+  line-height: 1;
+}
+
+.mega {
+  font-size: 72px;
+  font-size: 4.5rem;
+  line-height: 1;
+}
+
+.kilo {
+  font-size: 48px;
+  font-size: 3rem;
+  line-height: 1;
+}
+
+ul, ol, dd {
+  margin-left: 48px;
+  margin-left: 3rem;
+}
+
+ul {
+  list-style-type: disc;
+}
+
+ol {
+  list-style-type: decimal;
+}
+
+li > ul,
+li > ol {
+  margin-bottom: 0;
+}
+
+.blurb,
+.lede,
+.lead {
+  font-size: 18px;
+  font-size: 1.125rem;
+  line-height: 1.33333;
+}
+
+/*
+ * Quotes
+ */
+blockquote {
+  text-indent: -0.41em;
+  quotes: "" "";
+}
+blockquote p:before {
+  content: "";
+  content: open-quote;
+}
+blockquote p:after {
+  content: "";
+  content: no-close-quote;
+}
+blockquote p:last-of-type:after {
+  content: "";
+  content: close-quote;
+}
+blockquote p:last-of-type {
+  margin-bottom: 0;
+}
+blockquote q:before {
+  content: "\2018";
+  content: open-quote;
+}
+blockquote q:after {
+  content: "\2019";
+  content: close-quote;
+}
+
+/* ==========================================================================
+   Extras
+   ========================================================================== */
+/*
+ * Import optional Objects 
+ */
+/* ==========================================================================
+   Navigation
+   ========================================================================== */
+/*
+ * Horizontal Nav
+ */
+.nav {
+  list-style: none;
+  margin-left: 0;
+}
+.nav > li,
+.nav > li > a {
+  display: inline-block;
+  *display: inline;
+  zoom: 1;
+}
+
+/*
+ * Vertical Nav
+ */
+.nav--stacked > li {
+  display: list-item;
+}
+.nav--stacked > li > a {
+  display: block;
+}
+
+/*
+ * Centered list
+ */
+.nav--banner {
+  text-align: center;
+}
+
+/*
+ * Give nav links a big, blocky hit area
+ */
+.nav--block {
+  line-height: 1;
+  /**
+   * Remove whitespace caused by `inline-block`.
+   */
+  letter-spacing: -0.31em;
+  word-spacing: -0.43em;
+  white-space: nowrap;
+}
+.nav--block > li {
+  letter-spacing: normal;
+  word-spacing: normal;
+}
+.nav--block > li > a {
+  padding: 12px;
+}
+
+/**
+ * Force a nav to occupy 100% of the available width of its parent
+ */
+.nav--fit {
+  display: table;
+  width: 100%;
+}
+.nav--fit > li {
+  display: table-cell;
+}
+.nav--fit > li > a {
+  display: block;
+}
+
+/*
+ * Import jQuery utilities & tools
+ */
+/* 
+
+MYA
+
+Author: Rik Kendell - @Rikki_Sixx
+Version: 1.0;
+URL: http://www.mya.com/
+
+CONTENTS - GLOBAL.CSS
+-----------------------------------------
+1. BASE STYLES
+2. BASE TYPOGRAPHY & LINKS
+3. GLOBAL LAYOUT & GLOBAL CUSTOM TYPOGRAPHY
+4. CUSTOM LAYOUT & TYPOGRAPHY
+5. NON-SEMANTIC STYLING 
+
+*/
+/* ==========================================================================
+   1. Base styles
+   ========================================================================== */
+body {
+  background: #fff;
+}
+
+/* ==========================================================================
+   2. BASE TYPOGRAPHY & LINKS
+   ========================================================================== */
+/* ==========================================================================
+   3. GLOBAL LAYOUT & GLOBAL CUSTOM TYPOGRAPHY
+   ========================================================================== */
+.wrapper {
+  margin: auto;
+  max-width: 1100px;
+}
+
+.container {
+  padding: 1em;
+}
+
+.main-menu .nav > li {
+  display: block;
+}
+.main-menu .nav > li:hover {
+  background: #eee;
+}
+.main-menu .nav > li a {
+  display: block;
+}
+
+.main-header {
+  background: #fff;
+}
+.main-header .logo {
+  background: url("../img/logo.png") no-repeat red;
+  float: left;
+  height: 100px;
+  max-width: 200px;
+  width: 100%;
+}
+.main-header .logo a {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+.main-header .menu-button {
+  float: right;
+}
+
+.main-footer {
+  background: #333;
+  color: #515151;
+  border-top: 4px solid #f65097;
+}
+.main-footer a {
+  color: #fff;
+}
+.main-footer .foot-col {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-below a {
+  padding: 12px;
+}
+.nav-below li {
+  width: 100%;
+}
+
+.img-fit, .story-block img {
+  height: auto;
+  width: 100%;
+}
+
+/* ==========================================================================
+   4. CUSTOM LAYOUT & TYPOGRAPHY
+   ========================================================================== */
+@media screen and (min-width: 640px) {
+  .sidebar {
+    float: left;
+  }
+
+  .story-block {
+    float: left;
+  }
+}
+@media screen and (min-width: 860px) {
+  .branding {
+    float: left;
+  }
+
+  .main-menu {
+    float: right;
+  }
+  .main-menu ul {
+    float: right;
+    width: auto;
+  }
+
+  .nav-below .nav-next {
+    float: right;
+  }
+  .nav-below .nav-previous {
+    float: left;
+  }
+  .nav-below li {
+    width: auto;
+  }
+
+  .foot-col {
+    float: left;
+  }
+}
+/* ==========================================================================
+   5. Non-Semantic Helper classes
+   ========================================================================== */
+/* Image replacement */
+.ir {
+  background-color: transparent;
+  border: 0;
+  overflow: hidden;
+  /* IE 6/7 fallback */
+  *text-indent: -9999px;
+}
+.ir:before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 100%;
+}
+
+/* Hide from both screenreaders and browsers */
+.hidden {
+  display: none !important;
+  visibility: hidden;
+}
+
+/* Hide only visually, but have it available for screenreaders */
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  /* Extends the .visuallyhidden class to allow the element to be focusable when navigated to via the keyboard */
+}
+.visuallyhidden .focusable:active,
+.visuallyhidden .focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+}
+
+/* Hide visually and from screenreaders, but maintain layout */
+.invisible {
+  visibility: hidden;
+}

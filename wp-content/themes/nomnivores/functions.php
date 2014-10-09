@@ -50,6 +50,42 @@ function nomnivores_setup() {
 // CUSTOM POST TYPES
 function nomnivores_post_types_init() {
 	register_post_type( 
+		'review',
+		array(
+			'labels' => array(			
+				'name' => __( 'Reviews', THEME_SLUG ),
+				'singular_name' => __( 'Review', THEME_SLUG ),
+				'add_new' => __( 'Add New', THEME_SLUG ),
+				'add_new_item' => __( 'Add New Review', THEME_SLUG ),
+				'edit' => __( 'Edit', THEME_SLUG ),
+				'edit_item' => __( 'Edit Review', THEME_SLUG ),
+				'new_item' => __( 'New Review', THEME_SLUG ),
+				'view' => __( 'View Review', THEME_SLUG ),
+				'view_item' => __( 'View Review', THEME_SLUG ),
+				'search_items' => __( 'Search Reviews', THEME_SLUG ),
+				'not_found' => __( 'No reviews found', THEME_SLUG ),
+				'not_found_in_trash' => __( 'No reviews found in Trash', THEME_SLUG ),
+				'parent' => __( 'Parent Review', THEME_SLUG  )				
+			),
+			'description' => __( 'Reviews of restaurants, bars, food stalls/vans.', THEME_SLUG ),
+			'public' => true,
+			'menu_icon' => 'dashicons-calendar',
+			'supports' => array( 
+				'title',
+				'editor',
+				'excerpt',
+				'custom-fields',
+				'thumbnail',
+				'page-attributes',
+				'comments',
+				'trackbacks',
+				'author',
+				'revisions'
+			)
+		)
+	);
+
+	register_post_type( 
 		'event',
 		array(
 			'labels' => array(			

@@ -1,0 +1,200 @@
+/* 
+
+MYA
+
+Author: Rik Kendell - @Rikki_Sixx
+Version: 1.0;
+URL: http://www.mya.com/
+
+CONTENTS - GLOBAL.CSS
+-----------------------------------------
+1. BASE STYLES
+2. BASE TYPOGRAPHY & LINKS
+3. GLOBAL LAYOUT & GLOBAL CUSTOM TYPOGRAPHY
+4. CUSTOM LAYOUT & TYPOGRAPHY
+5. NON-SEMANTIC STYLING 
+
+*/
+
+/* ==========================================================================
+   1. Base styles
+   ========================================================================== */
+
+body { 
+	background: #fff;
+}
+
+/* ==========================================================================
+   2. BASE TYPOGRAPHY & LINKS
+   ========================================================================== */
+
+
+/* ==========================================================================
+   3. GLOBAL LAYOUT & GLOBAL CUSTOM TYPOGRAPHY
+   ========================================================================== */
+
+.wrapper {
+	margin: auto;
+	max-width: 1100px;	
+}
+.container {
+	padding: 1em;
+}
+
+.main-menu {
+
+	ul {		
+	}
+	.nav > li {
+		display: block;
+		&:hover {
+			background: #eee;
+		}
+		a { 
+			display: block;
+		}
+	}
+}
+
+.main-header {
+	background: #fff;
+	.logo { 
+		background: url("../img/logo.png") no-repeat red;
+		float: left;
+		height: 100px;
+		max-width: 200px;
+		width: 100%;
+		a {
+			display: block;
+			height: 100%;
+			width: 100%;
+		}
+	}
+	.menu-button {
+		float: right; 
+	}
+}
+
+.main-footer {
+	background: #333;
+	color: #515151;
+	border-top: 4px solid $brand-color;
+	a {
+		color: #fff;
+	}
+	.foot-col {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+}
+
+
+.nav-below {
+	a { padding: 12px; }
+	li {
+		width: 100%;
+	}
+}
+
+.img-fit { 
+		height: auto;
+		width: 100%; 
+	}
+
+/* ==========================================================================
+   4. CUSTOM LAYOUT & TYPOGRAPHY
+   ========================================================================== */
+
+// Patient Stories
+.story-block {
+	img { @extend .img-fit; }
+}
+
+
+@media screen and (min-width: $lap-start) {
+	.sidebar { float: left; }
+
+	.story-block { float: left; }
+}
+
+
+@media screen and (min-width: $desk-start) {
+
+	.branding { float: left; }
+
+	.main-menu {
+		float: right;
+		ul { float: right;
+			width: auto;
+		}
+	}
+
+	.nav-below {
+		.nav-next { float: right; }
+		.nav-previous { float: left; }
+		li {
+			width: auto;
+		}
+	}
+
+	.foot-col {
+		float: left;
+	}
+
+}
+
+
+/* ==========================================================================
+   5. Non-Semantic Helper classes
+   ========================================================================== */
+
+/* Image replacement */
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    /* IE 6/7 fallback */
+    *text-indent: -9999px;
+
+	&:before {
+	    content: "";
+	    display: block;
+	    width: 0;
+	    height: 100%;
+	}
+}
+
+/* Hide from both screenreaders and browsers */
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+/* Hide only visually, but have it available for screenreaders */
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+
+	/* Extends the .visuallyhidden class to allow the element to be focusable when navigated to via the keyboard */
+	.focusable:active,
+	.focusable:focus {
+	    clip: auto;
+	    height: auto;
+	    margin: 0;
+	    overflow: visible;
+	    position: static;
+	    width: auto;
+	}
+}
+
+/* Hide visually and from screenreaders, but maintain layout */
+.invisible {
+    visibility: hidden;
+}
